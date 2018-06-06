@@ -1,0 +1,53 @@
+http://codeforces.com/problemset/problem/1/A
+
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	long long m,n,a,count =0;
+	cin >> n >> m  >> a;
+	//cout << m*n;
+	long long max= m*n;
+	for(int i=0;i< max;i++)
+	{
+				
+		//cout << "i " << i << endl;
+		if(m<=0)
+		break;		
+		
+		if(m%a ==0)
+		count += m/a;
+		else count += m/a + 1;
+
+		//cout << count << endl;
+
+		
+		
+		n = n-a;
+		//cout << "n " << n << endl;		
+	
+		if(n<=0)
+		break;
+		
+		if(n%a ==0)
+		count+= n/a;
+		else count+= n/a + 1;
+
+		//cout << count << endl;
+		
+		m = m-a;
+		//cout << "m " << m << endl;
+		
+
+
+
+
+
+	}
+	cout << count << endl;
+
+    return 0;
+
+}
